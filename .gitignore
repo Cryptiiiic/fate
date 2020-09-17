@@ -1,0 +1,8 @@
+.theos
+.DS_Store
+packages
+.vsc
+.vscode
+.dragonbuild
+.dragon
+build.ninja

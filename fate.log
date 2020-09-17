@@ -1,0 +1,80 @@
+3398: open("/dev/urandom", 0)
+3398: sysctl({ 1, 21, 2065956881, 1263017230, 0, 0 }, 2, 0x103D3E850, 0x16F1C7A08, 0x0)
+3398: open("/usr/lib/libobjc-trampolines.dylib", 0)
+3398: open("/private/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist", 0)
+3398: open("/System/Library/CoreServices/SystemVersion.plist", 0)
+3398: mprotect(0x104418000, 0x4000, 0)
+3398: mprotect(0x104424000, 0x4000, 0)
+3398: mprotect(0x104428000, 0x4000, 0)
+3398: mprotect(0x104434000, 0x4000, 0)
+3398: mprotect(0x104410000, 0x90, 1)
+3398: mprotect(0x104258000, 0x4000, 3)
+3398: mprotect(0x104258000, 0x4000, 1)
+3398: mprotect(0x104410000, 0x90, 3)
+3398: mprotect(0x104410000, 0x90, 1)
+3398: geteuid() = -1905381068
+3398: getuid() = -1905381060
+3398: geteuid() = -1907046148
+3398: geteuid() = -1745139368
+3398: geteuid() = -1745145068
+3398: geteuid() = -1905381068
+3398: getuid() = -1905381060
+3398: geteuid() = -1745139368
+3398: geteuid() = -1745139368
+3398: open("/usr/share/icu/icudt64l.dat", 0)
+3398: sysctl({ 1, 14, 1, 3398, 2065956881, 1263017230 }, 4, 0x16F1C7780, 0x16F1C7778, 0x0)
+3398: sysctl({ 6, 5, 2065956881, 1263017230, 63512576, 1 }, 2, 0x16F1C7808, 0x16F1C7810, 0x0)
+3398: sysctl({ 6, 3, 1627547680, 1, 1627547664, 1 }, 2, 0x103BCD218, 0x16F1C78A0, 0x0)
+3398: sigaction(13) = -1908697564
+3398: geteuid() = -1745139368
+3398: geteuid() = -1745139368
+3398: geteuid() = -1745139368
+3398: geteuid() = -1745139368
+3398: open("/var/mobile/Containers/Data/Application/23C9E0B7-85F2-40C9-B7C9-4394E6878F93/Library/Saved Application State/com.aniplex.fategrandorder.en.savedState/KnownSceneSessions/data.data", 0)
+3398: open("/var/mobile/Containers/Data/Application/23C9E0B7-85F2-40C9-B7C9-4394E6878F93/Library/Saved Application State/com.aniplex.fategrandorder.en.savedState/KnownCanvasDefinitions/data.data", 0)
+3398: open("/var/mobile/Containers/Data/Application/23C9E0B7-85F2-40C9-B7C9-4394E6878F93/Library/Saved Application State/com.aniplex.fategrandorder.en.savedState/B6AAEFC5-4293-4C18-9E35-CFEB61A64BD3/data.data", 0)
+3398: open_dprotected_np("/var/mobile/Containers/Data/Application/23C9E0B7-85F2-40C9-B7C9-4394E6878F93/Library/Saved Application State/com.aniplex.fategrandorder.en.savedState/KnownSceneSessions/data.data", 1537, 3, 0, 438)
+3398: open("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/Managed/Metadata/global-metadata.dat", 0)
+3398: dup(3) = 26089148
+3398: sysctl({ 6, 7, 1, 0, 64360448, 1 }, 2, 0x1DB53FB40, 0x16F1C51B0, 0x0)
+3398: sysctl({ 6, 3, 65454080, 1, 1, 0 }, 2, 0x16F1C51A4, 0x16F1C5198, 0x0)
+3398: sysctl({ 6, 3, 771, 0, 2065956881, 1263017230 }, 2, 0x16F1C51D8, 0x16F1C51E0, 0x0)
+3398: open("/dev/urandom", 0)
+3398: access("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/data.unity3d", 0)
+3398: open("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/data.unity3d", 0)
+3398: access("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/globalgamemanagers.resG", 0)
+3398: access("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/globalgamemanagers.resG", 0)
+3398: access("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/globalgamemanagers.res", 0)
+3398: access("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/globalgamemanagers.res", 0)
+3398: access("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/globalgamemanagers.resS", 0)
+3398: access("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/globalgamemanagers.resS", 0)
+3398: open("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Data/data.unity3d", 0)
+3398: access("/System/Library/Frameworks/Metal.framework", 0x4)
+3398: access("/System/Library/Extensions/AGXMetalA11.bundle", 0x4)
+3398: open("/System/Library/Extensions/AGXMetalA11.bundle/Info.plist", 0)
+3398: open("/System/Library/Extensions/AGXMetalA11.bundle/ds.A11", 0)
+3398: geteuid() = -1745139368
+3398: access("/System/Library/Frameworks/QuartzCore.framework", 0x4)
+3398: access("/System/Library/Frameworks/QuartzCore.framework", 0x4)
+3398: geteuid() = -1745139368
+3398: geteuid() = -1745139368
+3398: open("/System/Library/Fonts/CoreUI/SFUI.ttf", 0)
+3398: access("/System/Library/CoreServices/CoreGlyphs.bundle", 0x4)
+3398: open("/System/Library/CoreServices/CoreGlyphs.bundle/Info.plist", 0)
+3398: access("/System/Library/PrivateFrameworks/UIKitCore.framework", 0x4)
+3398: access("/System/Library/PrivateFrameworks/UIKitCore.framework", 0x4)
+3398: open("/System/Library/CoreServices/CoreGlyphs.bundle/name_aliases.strings", 0)
+3398: open("/System/Library/CoreServices/CoreGlyphs.bundle/Assets.car", 0)
+3398: open("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/LaunchScreen-iPhone.nib", 0)
+3398: open("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/LaunchScreen-iPhone.nib/objects-13.0+.nib", 0)
+3398: open("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/Assets.car", 0)
+3398: open("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/LaunchScreen-iPhonePortrait.png", 0)
+3398: open("/System/Library/Fonts/Core/Helvetica.ttc", 0)
+3398: geteuid() = -1745139368
+3398: getuid() = -1898848148
+3398: open("/private/var/containers/Bundle/Application/E588A0AB-9DDB-46F2-96D9-6F1D39BCFE53/en.app/LaunchScreen-iPhonePortrait.png", 0)
+3398: geteuid() = -1745139368
+3398: readlink("/var/db/timezone/localtime", "", 1025)
+3398: open("/var/db/timezone/icutz/icutz44l.dat", 0)
+3398: readlink("/var/db/timezone/localtime", "", 1023)
+3398: exit(0)

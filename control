@@ -1,0 +1,9 @@
+Package: com.cryptic.fate
+Name: Fate
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Fate
+Maintainer: Cryptic
+Author: Cryptic
+Section: Tweaks
