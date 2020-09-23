@@ -4,11 +4,13 @@ DEBUG = 1
 FINALPACKAGE = 0
 GO_EASY_ON_ME = 1
 PACKAGE_VERSION = $(THEOS_PACKAGE_BASE_VERSION)
+export PREFIX = $(THEOS)/toolchain/Xcode.xctoolchain/usr/bin/
 
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = ____Fate
 ____Fate_FILES = Tweak.xm
+#____Fate_PRIVATE_FRAMEWORKS = IOKit
 ____Fate_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
