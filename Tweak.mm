@@ -390,362 +390,406 @@ extern "C"
     char *path1 = "/3cf2dc680d10f17a5499e9ebffb08a3e";
     int stat_hook(const char *path, struct stat *buf)
     {
+        uint64_t ret = 0x0;
         NSLog(@"Fate Bypass: syscall: stat: path: %s", path);
         if(strcmp(path, "/Applications/Cydia.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Applications/Flex.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Applications/GameGemiOS.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Applications/Sileo.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Applications/Zebra.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Applications/iGameGuardian.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Applications/Sileo.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Applications/Zebra.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Applications/iGameGuardian.app") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Library/BreakThrough") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Library/Frameworks/CydiaSubstrate.framework") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Library/LaunchDaemons/com.apple.gg.daemon.plist") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Library/MobileSubstrate") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Library/PreferenceLoader/Preferences/LibertyPref.plist") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Library/PreferenceLoader/Preferences/NoSubstitute.plist") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/Library/dpkg/info/xyz.willy.zebra.list") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/User") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/boot") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/jb") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/lib") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/mnt") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/etc/ssh") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/containers/Bundle/iosbinpack64") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/containers/Bundle/tweaksupport") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/db/stash") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/lib") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/libexec") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/mobile/Library/Caches/Snapshots/org.coolstar.SileoStore") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/mobile/Library/Caches/com.saurik.Cydia") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/mobile/Library/Flex3") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/mobile/Library/Preferences/org.coolstar.SileoStore.plist") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/mobile/Library/Preferences/xyz.willy.Zebra.plist") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/private/var/mobile/Library/iGameGuardian") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/usr/lib/TweakInject") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/usr/lib/libsubstrate.dylib") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/var/containers/Bundle/iosbinpack64") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/var/containers/Bundle/tweaksupport") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/var/libexec") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else if(strcmp(path, "/var/mobile/Library/Caches/com.saurik.Cydia") == 0)
         {
-            NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
             __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
         else
         {
             __asm__ volatile("mov x16, #0xbc");
-            __asm__ volatile("svc #0x80");
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            ret = 0x0;
+            asm volatile("mov %0, x0" : "=r" (ret));
+            NSLog(@"Fate Bypass: syscall: stat: ret: 0x%llX errno: %d", ret, errno);
         }
     }
 }
