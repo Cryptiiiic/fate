@@ -395,6 +395,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -403,6 +404,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -411,6 +413,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -419,6 +422,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -427,6 +431,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -435,6 +440,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -443,6 +449,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -451,6 +458,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -459,6 +467,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -467,6 +476,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -475,6 +485,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -483,6 +494,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -491,6 +503,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -499,6 +512,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -507,6 +521,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -515,6 +530,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -523,6 +539,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -531,6 +548,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -539,6 +557,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -547,6 +566,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -555,6 +575,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -563,6 +584,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -571,6 +593,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -579,6 +602,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -587,6 +611,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -595,6 +620,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -603,6 +629,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -611,6 +638,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -619,6 +647,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -627,6 +656,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -635,6 +665,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -643,6 +674,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -651,6 +683,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -659,6 +692,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -667,6 +701,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -675,6 +710,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -683,6 +719,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -691,6 +728,7 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
@@ -699,18 +737,15 @@ extern "C"
         {
             NSLog(@"Fate Bypass: syscall: stat: -1");
             __asm__ volatile("mov x0, %0" : : "r" (path) : );
+            __asm__ volatile("add x0, x0, #0x1");
             __asm__ volatile("mov x1, %0" : : "r" (buf) : );
             __asm__ volatile("mov x16, #0xbc");
             __asm__ volatile("svc #0x80");
         }
         else
         {
-            __asm__ volatile(
-                "MOV x16, 0xBC"
-            );
-            __asm__ volatile(
-                "SVC #0x80"
-            );
+            __asm__ volatile("mov x16, #0xbc");
+            __asm__ volatile("svc #0x80");
         }
     }
 }
@@ -720,7 +755,10 @@ __attribute__((naked)) int stat_trampoline(const char *path, struct stat *buf)
     __asm__ volatile("stp x29, x30, [sp, #-0x10]!");
     __asm__ volatile("mov x29, sp");
     __asm__ volatile("bl _stat_hook");
-    __asm__ volatile("ldp x29, x30, [sp, #0x10]!");
+    // __asm__ volatile("nop");
+    // __asm__ volatile("mov x0, #0x4141");
+    __asm__ volatile("ldp x29, x30, [sp], #0x10");
+    //__asm__ volatile("brk #0");
     __asm__ volatile("ret");
     // __asm__ volatile(
     //     "blr x16"
