@@ -10,9 +10,12 @@ static uint64_t slide;
 static void *dyld_get_image_name_ptr;
 static void *dyld_get_image_vmaddr_slide_ptr;
 static void *dyld_get_image_header_ptr;
+static void *dyld_register_func_for_add_image_ptr;
 static void *stat_ptr;
 static void *access_ptr;
 static void *symlink_ptr;
+static void *task_info_ptr;
+static void *hooked_func_ptr;
 static void *NSGetEnviron_ptr;
 static const uint8_t mov_x0_NEGATIVE1[] = { 0x00, 0x00, 0x80, 0x92 };
 static const uint8_t mov_x0_2[] = { 0x40, 0x00, 0x80, 0xD2 };
@@ -154,6 +157,28 @@ uint32_t num_bak;
 
 %end
 
+%group Hooked_func
+
+%hookf(void, hooked_func_ptr, const struct mach_header *mh, intptr_t vmaddr_slide)
+{
+    Dl_info dylib_info;
+    dladdr(mh, &dylib_info);
+    NSLog(@"Fate Bypass: Runtime: dyld_register_func_for_add_image: dylib_info.dli_fname: %s vmaddr_slide: 0x%llX", dylib_info.dli_fname, vmaddr_slide);
+}
+
+%end
+
+%group Dyld_register_func_for_add_image
+
+%hookf(void, dyld_register_func_for_add_image_ptr, void (*func)(const struct mach_header *mh, intptr_t vmaddr_slide))
+{
+    NSLog(@"Fate Bypass: Runtime: dyld_register_func_for_add_image called!");
+    hooked_func_ptr = &func;
+    %init(Hooked_func);
+}
+
+%end
+
 %group Stat
 
 %hookf(int, stat_ptr, const char *path, struct stat *buf)
@@ -243,6 +268,19 @@ uint32_t num_bak;
         NSLog(@"Fate Bypass: Runtime: symlink: ret: %d path: %s link: %s", orig, path, link);
         return orig;
     }
+}
+
+%end
+
+%group Task_info
+
+%hookf(kern_return_t, task_info_ptr, task_name_t target_task, task_flavor_t flavor, task_info_t task_info_out, mach_msg_type_number_t *task_info_outCnt)
+{
+    kern_return_t orig = %orig;
+    task_info_out = NULL;
+    task_info_outCnt = NULL;
+    NSLog(@"Fate Bypass: Runtime: task_info: ret: 0x%X target_task: 0x%X mach_task_self: 0x%X flavor: 0x%X task_info_out: 0x%llX task_info_outCnt: 0x%llx", orig, target_task, mach_task_self(), flavor, task_info_out, task_info_outCnt);
+    return KERN_MEMORY_FAILURE;
 }
 
 %end
@@ -476,6 +514,13 @@ static void init()
             NSLog(@"Fate Bypass: got dyld_get_image_header!");
             %init(Dyld_get_image_header);
         }
+        dyld_register_func_for_add_image_ptr = dlsym(libsystem, "_dyld_register_func_for_add_image");
+        NSLog(@"Fate Bypass: dlerror: %s", dlerror());
+        if(dyld_register_func_for_add_image_ptr)
+        {
+            NSLog(@"Fate Bypass: got dyld_register_func_for_add_image!");
+            %init(Dyld_register_func_for_add_image);
+        }
         stat_ptr = dlsym(libsystem, "stat");
         NSLog(@"Fate Bypass: dlerror: %s", dlerror());
         if(stat_ptr)
@@ -496,6 +541,13 @@ static void init()
         {
             NSLog(@"Fate Bypass: got symlink!");
             %init(Symlink);
+        }
+        task_info_ptr = dlsym(libsystem, "task_info");
+        NSLog(@"Fate Bypass: dlerror: %s", dlerror());
+        if(task_info_ptr)
+        {
+            NSLog(@"Fate Bypass: got task_info!");
+            %init(Task_info);
         }
         NSGetEnviron_ptr = dlsym(libsystem, "_NSGetEnviron");
         NSLog(@"Fate Bypass: dlerror: %s", dlerror());
